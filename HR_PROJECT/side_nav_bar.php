@@ -88,7 +88,7 @@
         👤 <?php echo $_SESSION['username'] ?? 'Guest'; ?> 
         (<?php echo $_SESSION['role'] ?? 'employee'; ?>)
       </span>
-      <a href="logout.php" class="btn btn-outline-light btn-sm">Logout</a>
+      <a href="/HR_PROJECT/logout.php" class="btn btn-outline-light btn-sm">Logout</a>
     </div>
   </div>
 </nav>

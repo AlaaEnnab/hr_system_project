@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       <div class="content">
 
     <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white">
+        <div class="card-header bg-success text-white">
             <h3>Add Payroll</h3>
         </div>
         <div class="card-body">

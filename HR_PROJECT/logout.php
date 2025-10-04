@@ -2,5 +2,7 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: login.php");
+header("Location: /HR_PROJECT/login.php"); 
+
 exit;
+?>

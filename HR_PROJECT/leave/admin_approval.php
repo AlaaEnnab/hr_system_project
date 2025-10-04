@@ -1,8 +1,7 @@
 <?php
 
 require_once("../auth.php");
-
-include "../side_nav_bar.php";
+ include "../side_nav_bar.php";
 include "../config.php";
 $conn = (new Database())->connect();
 
@@ -20,8 +19,9 @@ if(isset($_GET['action'], $_GET['id'])){
     $stmt->bind_param("si", $status, $id);
     $stmt->execute();
 
-    header("Location: admin_approval.php");
-    exit;
+  header("Location: /HR_PROJECT/leaves/admin_approval.php");
+exit;
+
 }
 
 // fetch all leave request
@@ -72,8 +72,9 @@ $result = $conn->query("
             <td><?= $row['status'] ?></td>
             <td>
                 <?php if($row['status'] === 'Pending'): ?>
-                    <a href="admin_approval.php?action=approve&id=<?= $row['id'] ?>" class="btn btn-success btn-sm">Approve</a>
-                    <a href="admin_approval.php?action=reject&id=<?= $row['id'] ?>" class="btn btn-danger btn-sm">Reject</a>
+                   <a href="/HR_PROJECT/leaves/admin_approval.php?action=approve&id=<?= $row['id'] ?>" class="btn btn-success btn-sm">Approve</a>
+                   <a href="/HR_PROJECT/leaves/admin_approval.php?action=reject&id=<?= $row['id'] ?>" class="btn btn-danger btn-sm">Reject</a>
+
                 <?php else: ?>
                     -
                 <?php endif; ?>
